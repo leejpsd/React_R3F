@@ -1,10 +1,10 @@
-import "./App.css";
+import MainCanvas from "./components/MainCanvas";
 
 function App() {
   return (
-    <>
-      <h1>r3f 학습시작</h1>
-    </>
+    <div style={{ width: "100vw", height: "100vh" }}>
+      <MainCanvas />
+    </div>
   );
 }
 
