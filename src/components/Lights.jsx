@@ -12,7 +12,7 @@ export default function Lights() {
   // useHelper(lightRef, THREE.DirectionalLightHelper, 3, 0xffff00); // Directional Light의 방향을 확인
   // useHelper(lightRef, THREE.PointLightHelper, 1, 0xffff00);       // Point Light의 범위와 위치를 확인
   // useHelper(lightRef, THREE.HemisphereLightHelper, 1, 0xffff00);  // Hemisphere Light의 상하 색상 범위를 확인
-  useHelper(lightRef, THREE.SpotLightHelper, 1, 0xffff00); // Spot Light의 방향과 범위 확인
+  // useHelper(lightRef, THREE.SpotLightHelper, 1, 0xffff00); // Spot Light의 방향과 범위 확인
 
   useEffect(() => {
     if (targetRef.current) setTarget(targetRef.current);
@@ -25,20 +25,22 @@ export default function Lights() {
     // color: 빛의 색상 (기본값 0xffffff)
     // intensity: 빛의 세기
 
-    // <directionalLight
-    //   ref={lightRef}
-    //   castShadow
-    //   args={[0xffffff, 5]}
-    //   position={[4, 4, 4]}
-    //   shadow-camera-left={-25}
-    //   shadow-camera-right={25}
-    //   shadow-camera-top={25}
-    //   shadow-camera-bottom={-25}
-    //   shadow-camera-near={0.1}
-    //   shadow-camera-far={1000}
-    //   shadow-mapSize-width={4096}
-    //   shadow-mapSize-height={4096}
-    // />
+    <directionalLight
+      ref={lightRef}
+      castShadow
+      args={[0xffffff, 5]}
+      position={[4, 4, 4]}
+      //그림자가 그려지는 범위
+      shadow-camera-left={-25}
+      shadow-camera-right={25}
+      shadow-camera-top={25}
+      shadow-camera-bottom={-25}
+      shadow-camera-near={0.1}
+      shadow-camera-far={1000}
+      //그림자 퀄리티
+      shadow-mapSize-width={4096}
+      shadow-mapSize-height={4096}
+    />
     // Directional Light: 태양광처럼 특정 방향으로 빛을 비추는 라이트, 그림자를 생성 가능.
     // position: 빛의 위치
     // castShadow: 그림자 활성화
@@ -87,22 +89,22 @@ export default function Lights() {
     // penumbra: 가장자리의 부드러움 정도
     // decay: 거리 따라 빛이 약해지는 정도
 
-    <SpotLight
-      color={0xffffff} // 빛의 색상
-      intensity={10} // 빛의 세기
-      distance={100} // 빛이 도달하는 거리
-      angle={Math.PI / 4} // 빛이 퍼지는 각도 (라디안)
-      penumbra={1} // 빛이 가장자리에서 자연스럽게 퍼지는 정도
-      decay={0.5} // 빛이 거리 따라 희미해지는 정도
-      anglePower={100} // 빛이 퍼지는 각도 조정
-      attenuation={5} // 빛의 감쇠 효과
-      radiusTop={1} // 원뿔 상단의 반경
-      radiusBottom={10} // 원뿔 하단의 반경
-      opacity={1} // 빛의 불투명도
-      volumetric // 볼류메트릭 효과(빛의 존재감이 더 강하게 표시됨)
-      debug // 디버그 모드 활성화, 조명 시각화 확인 가능
-      position={[3, 3, 3]} // 빛의 위치
-      target={target} // 빛의 목표가 되는 위치 (target)
-    />
+    // <SpotLight
+    //   color={0xffffff} // 빛의 색상
+    //   intensity={10} // 빛의 세기
+    //   distance={100} // 빛이 도달하는 거리
+    //   angle={Math.PI / 4} // 빛이 퍼지는 각도 (라디안)
+    //   penumbra={1} // 빛이 가장자리에서 자연스럽게 퍼지는 정도
+    //   decay={0.5} // 빛이 거리 따라 희미해지는 정도
+    //   anglePower={100} // 빛이 퍼지는 각도 조정
+    //   attenuation={5} // 빛의 감쇠 효과
+    //   radiusTop={1} // 원뿔 상단의 반경
+    //   radiusBottom={10} // 원뿔 하단의 반경
+    //   opacity={1} // 빛의 불투명도
+    //   volumetric // 볼류메트릭 효과(빛의 존재감이 더 강하게 표시됨)
+    //   debug // 디버그 모드 활성화, 조명 시각화 확인 가능
+    //   position={[3, 3, 3]} // 빛의 위치
+    //   target={target} // 빛의 목표가 되는 위치 (target)
+    // />
   );
 }
