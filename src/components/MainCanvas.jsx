@@ -7,6 +7,7 @@ import Meshes2 from "./Meshes2";
 import Lights from "./LightsTest";
 import * as THREE from "three";
 import Controls from "./Controls";
+import GLBModel from "./GLBModel";
 export default function MainCanvas() {
   // gl = renderer
   return (
@@ -30,6 +31,7 @@ export default function MainCanvas() {
       <Lights />
       {/* <LightsTest /> */}
       <Meshes2 />
+      <GLBModel />
     </Canvas>
   );
 }

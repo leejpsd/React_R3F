@@ -12,14 +12,14 @@ export default function Meshes() {
 
       {/* 토러스 노트 (Torus Knot) - 메탈릭 재질 */}
       {/* 색상: 빨간색, 위치: (-3, 1.6, 0), 거친 정도: 0.5, 금속성: 1 */}
-      <TorusKnot
+      {/* <TorusKnot
         args={[1, 0.2, 128, 128, 2, 3]}
         position={[-3, 1.6, 0]}
         castShadow
         receiveShadow
       >
         <meshStandardMaterial color={0xff0000} />
-      </TorusKnot>
+      </TorusKnot> */}
     </>
   );
 }

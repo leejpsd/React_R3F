@@ -8,6 +8,8 @@ import {
 
 export default function Controls() {
   return (
+    <OrbitControls />
+
     // <OrbitControls
     //   enableDamping // 감속 효과를 활성화하여 카메라 이동이 부드러워짐
     //   dampingFactor={0.03} // 감속 효과의 강도 설정
@@ -40,16 +42,16 @@ export default function Controls() {
     // PointerLockControls: 마우스 커서를 숨기고 화면의 중앙에서 컨트롤하도록 고정.
     // 주로 1인칭 시점의 게임 컨트롤에 사용.
 
-    <TrackballControls
-      rotateSpeed={2} // 회전 속도
-      zoomSpeed={1.5} // 줌 속도
-      panSpeed={0.5} // 팬 이동 속도
-      noRotate={false} // 회전 비활성화 여부
-      noZoom={false} // 줌 비활성화 여부
-      noPan={false} // 팬 비활성화 여부
-      staticMoving={false} // 정적 이동 여부 (true면 움직임이 멈추는 데 시간이 걸리지 않음)
-      dynamicDampingFactor={0.05} // 움직임 감속 효과 설정
-    />
+    // <TrackballControls
+    //   rotateSpeed={2} // 회전 속도
+    //   zoomSpeed={1.5} // 줌 속도
+    //   panSpeed={0.5} // 팬 이동 속도
+    //   noRotate={false} // 회전 비활성화 여부
+    //   noZoom={false} // 줌 비활성화 여부
+    //   noPan={false} // 팬 비활성화 여부
+    //   staticMoving={false} // 정적 이동 여부 (true면 움직임이 멈추는 데 시간이 걸리지 않음)
+    //   dynamicDampingFactor={0.05} // 움직임 감속 효과 설정
+    // />
     // TrackballControls: 트랙볼처럼 마우스를 사용해 자유롭게 회전, 줌, 팬 가능.
   );
 }
