@@ -4,8 +4,9 @@ import React from "react";
 import { Color } from "three";
 import Meshes from "./Meshes";
 import Meshes2 from "./Meshes2";
-import Lights from "./Lights";
+import Lights from "./LightsTest";
 import * as THREE from "three";
+import Controls from "./Controls";
 export default function MainCanvas() {
   // gl = renderer
   return (
@@ -24,9 +25,10 @@ export default function MainCanvas() {
       }}
       scene={{ background: new Color(0x000000) }}
     >
-      <OrbitControls />
+      <Controls />
       {/* <Meshes /> */}
       <Lights />
+      {/* <LightsTest /> */}
       <Meshes2 />
     </Canvas>
   );
